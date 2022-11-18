@@ -1,0 +1,83 @@
+@import '../../style/style.scss';
+
+.button {
+  min-width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 12px;
+
+  &.contained {
+    background: $primaryColor;
+    color: $white;
+
+    &:hover:not(:disabled) {
+      background: darken($primaryColor, 10%);
+    }
+
+    &.secondary {
+      background: $secondaryColor;
+
+      &:hover:not(:disabled) {
+        background: darken($secondaryColor, 10%);
+      }
+    }
+
+    &:disabled {
+      background: $disabledColor;
+      color: $disabledTextColor;
+    }
+  }
+
+  &.outlined {
+    border: 1px solid $primaryColor;
+    background: $white;
+    color: $primaryColor;
+
+    &:hover:not(:disabled) {
+      color: $white;
+      background: $primaryColor;
+    }
+
+    &.secondary {
+      border: 1px solid $secondaryColor;
+      color: $secondaryColor;
+      background: $white;
+
+      &:hover:not(:disabled) {
+        color: $white;
+        background: $secondaryColor;
+      }
+    }
+
+    &:disabled {
+      color: $disabledTextColor;
+      border: 1px solid $disabledTextColor;
+    }
+  }
+
+  &.text {
+    color: $primaryColor;
+    background: none;
+
+    &:hover:not(:disabled) {
+      color: $primaryColor;
+      background: lighten($primaryColor, 40%);
+    }
+
+    &.secondary {
+      color: $secondaryColor;
+
+      &:hover:not(:disabled) {
+        color: $secondaryColor;
+        background: lighten($secondaryColor, 40%);
+      }
+    }
+
+    &:disabled {
+      color: $disabledTextColor;
+    }
+  }
+}
