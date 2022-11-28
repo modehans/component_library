@@ -1,0 +1,49 @@
+@import '../../style/style.scss';
+
+.checkbox {
+  margin: 6px;
+
+  .checkbox-input {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    border: 1px $secondaryColor solid;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    box-sizing: border-box;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:checked {
+      background: $white;
+
+      &::after {
+        content: '\2713';
+        color: $primaryColor;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .checkbox-text {
+    color: $textColor;
+    margin-left: 12px;
+    display: inline-block;
+  }
+
+  .checkbox-label {
+    color: $textColor;
+    display: inline-block;
+    height: 20px;
+  }
+}
